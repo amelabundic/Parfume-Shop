@@ -1,0 +1,17 @@
+﻿@model HomeViewModel
+
+<div class="m-3">
+    @await Html.PartialAsync("Carousel")
+</div>
+
+<h4 class="text-center p-2">Parfume of the month</h4>
+<h5 class="m-3">Our monthly selection - just for you!</h5>
+
+<div class="row">
+
+    @foreach (var parfume in Model.ParfumesOfTheMonth)
+    {
+        @Html.Partial("ParfumesOfTheMonthSummary", parfume)
+    }
+
+</div>
