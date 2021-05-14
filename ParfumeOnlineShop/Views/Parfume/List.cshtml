@@ -1,0 +1,16 @@
+﻿
+@model ParfumeListViewModel
+@*@{
+        Layout = null;
+    }*@
+
+<h1>Parfume online shop</h1>
+<h3>@Model.CurrentCategory</h3>
+
+<div class="row">
+    @foreach(var parfume in Model.Parfumes)
+    {
+       @Html.Partial("ParfumeOverViewSummary", parfume);
+    }
+</div>
+

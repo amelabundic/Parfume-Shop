@@ -1,0 +1,18 @@
+﻿
+@model Parfume
+
+<div class="thumbnail w-50 h-auto offset-3">
+    <img class="details" src="@Model.ImageUrl" alt="@Model.Name">
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Price</h3>
+        <h3>@Model.Name</h3>
+        <h4>@Model.ShortDescription</h4>
+        <p>@Model.LongDescription</p>
+
+        <div class="addToCart">
+            <p class="button btn-sm"><a class="btn btn-primary" asp-controller="ShoppingCart"
+             asp-action="AddToShoppingCart" asp-route-parfumeId="@Model.ParfumeId">Add to cart</a></p>
+        </div>
+    </div>
+</div>
+
